@@ -18,7 +18,7 @@ class Actor(Network):
             logstd = torch.zeros_like(mu)
             std = torch.exp(logstd)
         return mu,std
-
+    
 class Critic(Network):
     def __init__(self, layer_num, input_dim, output_dim, hidden_dim, activation_function, last_activation = None):
         super(Critic, self).__init__(layer_num, input_dim, output_dim, hidden_dim, activation_function ,last_activation)

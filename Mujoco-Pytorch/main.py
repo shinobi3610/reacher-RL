@@ -32,6 +32,7 @@ parser.read('config.ini')
 agent_args = Dict(parser,args.algo)
 
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
+print(device)
 if args.use_cuda == False:
     device = 'cpu'
     
